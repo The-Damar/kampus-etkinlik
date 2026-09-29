@@ -2,4 +2,4 @@
 Hazırlayan: Ali Özdamar
 
 ## Canlı URL
-- Vercel:
+- Vercel: https://kampus-etkinlik-sprint1-alpha.vercel.app/index.html
