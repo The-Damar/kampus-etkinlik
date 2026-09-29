@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Etkinlik Güncelle</title>
+</head>
+<body>
+  <header>
+    <h1>Etkinlik Güncelle</h1>
+    <nav>
+      <a href="index.html">Ana Sayfa</a> |
+      <a href="etkinlik-ekle.html">Ekle</a> |
+      <a href="etkinlik-guncelle.html">Güncelle</a>
+    </nav>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+      <div>
+        <label for="ad-guncelle">Etkinlik Adı:</label><br>
+        <input type="text" id="ad-guncelle" name="ad" value="Kariyer Günleri" required>
+      </div>
+      <br>
+
+      <div>
+        <label for="kategori-guncelle">Kategori:</label><br>
+        <select id="kategori-guncelle" name="kategori" required>
+          <option value="seminer" selected>Seminer</option>
+          <option value="atolye">Atölye</option>
+          <option value="konferans">Konferans</option>
+        </select>
+      </div>
+      <br>
+
+      <div>
+        <label for="tarih-guncelle">Tarih:</label><br>
+        <input type="date" id="tarih-guncelle" name="tarih" value="2026-10-12" required>
+      </div>
+      <br>
+
+      <div>
+        <label for="aciklama-guncelle">Açıklama:</label><br>
+        <textarea id="aciklama-guncelle" name="aciklama" rows="4" cols="30" required>Mezun söyleşileri</textarea>
+      </div>
+      <br>
+
+      <button type="submit">Güncelle</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Ad Soyad · 2026</p>
+  </footer>
+</body>
+</html>
