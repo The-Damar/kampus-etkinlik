@@ -1,4 +1,4 @@
-/* ALİ ÖZDAMAR 2416501008 */
+
 :root {
 --no: 2416501008;
 --ton: 288;
@@ -23,14 +23,14 @@ line-height: 1.5;
 padding: var(--bosluk-m);
 }
 
-/* Sayfa genişlik ve hizalama */
+
 header, nav, main, footer {
 max-width: 960px;
 margin-left: auto;
 margin-right: auto;
 }
 
-/* Üst Başlık ve Menü - Slaytlardaki Blok Tasarımı */
+
 header {
 background-color: var(--renk-ana);
 padding: var(--bosluk-m);
@@ -66,7 +66,7 @@ nav a:hover {
 background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Kart Izgaraları (Mobile First: Telefonda tek sütun, 768px üstü çoklu sütun) */
+
 .etkinlik-izgara {
 display: grid;
 grid-template-columns: 1fr;
@@ -93,7 +93,7 @@ grid-template-columns: repeat(2, 1fr);
 }
 }
 
-/* Kart Mimarisi */
+
 .etkinlik-kart {
 background: #ffffff;
 border: 1px solid hsla(var(--ton), 65%, 38%, 0.2);
@@ -116,7 +116,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* Detay Sayfası - Afiş ve Künye */
+
 .detay-duzen {
 display: flex;
 flex-direction: column;
@@ -197,7 +197,7 @@ font-size: 1rem;
 background-color: #ffffff;
 }
 
-/* Hatalı / Boş Bırakılan Alan: Sayfa ilk açılışta temiz durur, etkileşimde veya submit'te hata verince kırmızılaşır */
+
 input:user-invalid, select:user-invalid, textarea:user-invalid {
 border-color: #dc2626;
 background-color: #fef2f2;
@@ -219,7 +219,7 @@ button:hover {
 opacity: 0.9;
 }
 
-/* Alt Bilgi */
+
 footer {
 margin-top: 2rem;
 font-size: 0.85rem;
