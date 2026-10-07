@@ -7,7 +7,7 @@ if (form) {
   const id = new URLSearchParams(location.search).get("id");
   const etkinlik = events.find((e) => e.id === id);
 
-  // GÜNCELLEME SAYFASI KONTROLÜ
+  
   if (isGuncelle) {
     if (!etkinlik) {
       form.outerHTML = `
@@ -17,7 +17,7 @@ if (form) {
         </div>
       `;
     } else {
-      // Alanları doldur
+      
       if (form.elements.ad) form.elements.ad.value = etkinlik.title;
       if (form.elements.kategori) form.elements.kategori.value = etkinlik.category;
       if (form.elements.tarih) form.elements.tarih.value = etkinlik.date;
@@ -28,7 +28,7 @@ if (form) {
     }
   }
 
-  // FORM SUBMIT OLA YI
+  
   const activeForm = document.querySelector("#etkinlik-formu");
   if (activeForm) {
     activeForm.setAttribute("novalidate", "true");
@@ -36,7 +36,7 @@ if (form) {
     activeForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      // Eski hataları temizle
+      
       document.querySelectorAll(".hata-mesaji").forEach((el) => (el.textContent = ""));
       document.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
       const mesajKutusu = document.querySelector("#form-mesaj");
@@ -54,7 +54,7 @@ if (form) {
         description: fd.get("aciklama") ? fd.get("aciklama").trim() : ""
       };
 
-      // Doğrulama kuralları (Slayt Adım 10)
+      
       const errors = {};
 
       if (data.title.length < 3) {
@@ -76,7 +76,7 @@ if (form) {
         errors.kontenjan = "Kontenjan 1 ile 1000 arasında olmalıdır.";
       }
 
-      // Hataları ekrana yaz
+      
       if (Object.keys(errors).length > 0) {
         for (const [key, msg] of Object.entries(errors)) {
           const field = activeForm.elements[key];
@@ -94,7 +94,7 @@ if (form) {
         return;
       }
 
-      // Başarılı durum
+      
       if (mesajKutusu) {
         mesajKutusu.innerHTML = `
           <div class="basari-kutusu">

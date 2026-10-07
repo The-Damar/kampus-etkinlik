@@ -5,7 +5,7 @@ const aramaInput = document.querySelector("#arama");
 const kategoriSelect = document.querySelector("#kategori-filtre");
 const sonucSatiri = document.querySelector("#sonuc");
 
-// Tarihi Türkçe formata çevirme fonksiyonu (örn: "12 Ekim 2026")
+
 function formatDate(dateStr) {
   if (!dateStr) return "";
   const [year, month, day] = dateStr.split("-");
@@ -17,7 +17,7 @@ function formatDate(dateStr) {
   });
 }
 
-// Kart HTML'i üreten fonksiyon
+
 function createCard(event) {
   return `
     <article class="kart">
@@ -32,7 +32,7 @@ function createCard(event) {
   `;
 }
 
-// Kartları ekrana basan fonksiyon
+
 function render(dizi) {
   if (!list) return;
   if (dizi.length === 0) {
@@ -42,7 +42,7 @@ function render(dizi) {
   }
 }
 
-// Filtreleme mantığı
+
 function filtrele() {
   if (!aramaInput || !kategoriSelect) return;
 
@@ -71,7 +71,7 @@ function filtrele() {
   }
 }
 
-// Kategori seçeneklerini dinamik doldurma (Set kullanarak benzersiz yapma)
+
 function initKategoriler() {
   if (!kategoriSelect) return;
   const kategoriler = [...new Set(events.map((e) => e.category))];
@@ -83,16 +83,16 @@ function initKategoriler() {
   });
 }
 
-// Sayfa yüklendiğinde çalışacak ana kısım
+
 if (list) {
   if (list.dataset.limit) {
-    // ANA SAYFA (index.html) -> data-limit="2" var
+    
     const yaklasan = [...events]
       .sort((a, b) => a.date.localeCompare(b.date))
       .slice(0, Number(list.dataset.limit));
     render(yaklasan);
   } else {
-    // LİSTE SAYFASI (etkinlikler.html)
+    
     initKategoriler();
     render(events);
 

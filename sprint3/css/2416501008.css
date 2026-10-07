@@ -87,7 +87,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* Form Stilleri */
+
 form {
   background: #ffffff;
   border: 1px solid hsla(var(--ton), 65%, 38%, 0.2);
@@ -136,7 +136,7 @@ button {
   align-self: flex-start;
 }
 
-/* Sprint 3 Ek Stiller */
+
 .filtre {
   display: grid;
   grid-template-columns: 1fr 1fr;
