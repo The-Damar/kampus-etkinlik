@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tüm Etkinlikler - Kampüs Etkinlikleri</title>
+  <link rel="stylesheet" href="css/2416501008.css">
+  <script type="module" src="js/event-list.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Tüm Etkinlikler</h1>
+    <p>Yakın zamanda düzenlenecek etkinlikler.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="etkinlikler.html">Etkinlikler</a>
+    <a href="etkinlik-ekle.html">Ekle</a>
+  </nav>
+
+  <main class="container">
+    <form id="filtre-formu" class="filtre">
+      <div class="form-grup">
+        <label for="arama">Etkinlik ara</label>
+        <input type="search" id="arama" placeholder="atölye, kariyer...">
+      </div>
+      <div class="form-grup">
+        <label for="kategori-filtre">Kategori</label>
+        <select id="kategori-filtre">
+          <option value="">Tümü</option>
+        </select>
+      </div>
+    </form>
+
+    <p id="sonuc"></p>
+
+    <section id="etkinlik-listesi" class="etkinlik-listesi"></section>
+  </main>
+
+  <footer>
+    <p>Ali Özdamar - 2416501008 - 2026</p>
+  </footer>
+</body>
+</html>
