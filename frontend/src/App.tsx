@@ -172,56 +172,57 @@ export default function App() {
           </section>
         )}
 
-        {/* 3. DETAY SAYFASI */}
-        {page === "detail" && (
-          <section>
-            {!selectedEvent ? (
-              <div>
-                <h2>Etkinlik Bulunamadı</h2>
-                <button className="buton" onClick={() => go("events")}>
-                  Listeye dön
-                </button>
-              </div>
-            ) : (
-              <article className="detay">
-                <h2>{selectedEvent.title}</h2>
-                <div className="detay-icerik">
-                  {selectedEvent.image && (
-                    <figure className="afis-kutu">
-                      <img
-                        src={selectedEvent.image}
-                        alt={`${selectedEvent.title} afişi`}
-                      />
-                      <figcaption>{selectedEvent.title} afişi</figcaption>
-                    </figure>
-                  )}
-                  <aside className="kunye-kutu">
-                    <h3>Etkinlik Künyesi</h3>
-                    <p><strong>Tarih:</strong> {selectedEvent.date}, {selectedEvent.time}</p>
-                    <p><strong>Yer:</strong> {selectedEvent.location}</p>
-                    <p><strong>Kategori:</strong> {selectedEvent.category}</p>
-                    <p><strong>Kontenjan:</strong> {selectedEvent.capacity} kişi</p>
-                  </aside>
-                </div>
-                <div style={{ marginTop: "20px" }}>
-                  <h3>Açıklama</h3>
-                  <p>{selectedEvent.description}</p>
-                </div>
-                <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>
-                  <button className="buton" onClick={() => go("events")}>
-                    Listeye dön
-                  </button>
-                  <button
-                    className="buton"
-                    onClick={() => go("update", selectedEvent.id)}
-                  >
-                    Bu etkinliği güncelle
-                  </button>
-                </div>
-              </article>
-            )}
-          </section>
-        )}
+        {/* DETAY SAYFASI */}
+{page === "detail" && (
+  <section>
+    {!selectedEvent ? (
+      <div>
+        <h2>Etkinlik Bulunamadı</h2>
+        <button className="buton" onClick={() => go("events")}>
+          Listeye dön
+        </button>
+      </div>
+    ) : (
+      <article className="detay">
+        <h2>{selectedEvent.title}</h2>
+        <div className="detay-icerik" style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+          {selectedEvent.image && (
+            <figure className="afis-kutu">
+              <img
+                src={selectedEvent.image}
+                alt={`${selectedEvent.title} afişi`}
+                style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '8px' }}
+              />
+              <figcaption>{selectedEvent.title} afişi</figcaption>
+            </figure>
+          )}
+          <aside className="kunye-kutu" style={{ flex: '1', minWidth: '250px' }}>
+            <h3>Etkinlik Künyesi</h3>
+            <p><strong>Tarih:</strong> {selectedEvent.date}, {selectedEvent.time}</p>
+            <p><strong>Yer:</strong> {selectedEvent.location}</p>
+            <p><strong>Kategori:</strong> {selectedEvent.category}</p>
+            <p><strong>Kontenjan:</strong> {selectedEvent.capacity} kişi</p>
+          </aside>
+        </div>
+        <div style={{ marginTop: "20px" }}>
+          <h3>Açıklama</h3>
+          <p>{selectedEvent.description}</p>
+        </div>
+        <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>
+          <button className="buton" onClick={() => go("events")}>
+            Listeye dön
+          </button>
+          <button
+            className="buton"
+            onClick={() => go("update", selectedEvent.id)}
+          >
+            Bu etkinliği güncelle
+          </button>
+        </div>
+      </article>
+    )}
+  </section>
+)}
 
         {/* 4 & 5. EKLE VE GÜNCELLE SAYFALARI */}
         {(page === "add" || page === "update") && (
