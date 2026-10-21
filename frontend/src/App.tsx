@@ -10,31 +10,31 @@ export default function App() {
   const [page, setPage] = useState<PageName>("home");
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
-  // Etkinlikler Sayfası State'leri
+  
   const [searchText, setSearchText] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<Category | "">("");
 
-  // Sayfa Değiştirme Fonksiyonu
+  
   function go(next: PageName, id: string | null = null) {
     setPage(next);
     setSelectedId(id);
   }
 
-  // Seçili Etkinliği Bulma
+  
   const selectedEvent = selectedId ? findEventById(events, selectedId) : undefined;
 
-  // Yaklaşan 2 Etkinlik (Ana Sayfa İçin)
+  
   const upcomingEvents = [...events]
     .sort((a, b) => a.date.localeCompare(b.date))
     .slice(0, 2);
 
-  // Filtrelenmiş Etkinlikler (Etkinlikler Sayfası İçin)
+  
   const filteredEvents = filterByCategory(
     searchEvents(events, searchText),
     selectedCategory
   );
 
-  // Dinamik Sekme Başlığı (useEffect - Adım 11)
+  
   useEffect(() => {
     if (page === "home") {
       document.title = "Kampüs Etkinlikleri - Ana Sayfa";
@@ -51,7 +51,7 @@ export default function App() {
     }
   }, [page, selectedEvent]);
 
-  // Kart Oluşturma Fonksiyonu (Render Card)
+  
   function renderCard(event: CampusEvent) {
     return (
       <article className="kart" key={event.id}>
@@ -111,7 +111,7 @@ export default function App() {
       </header>
 
       <main>
-        {/* 1. ANA SAYFA */}
+        {}
         {page === "home" && (
           <section>
             <h2>Yaklaşan 2 Etkinlik</h2>
@@ -126,7 +126,7 @@ export default function App() {
           </section>
         )}
 
-        {/* 2. ETKİNLİKLER SAYFASI */}
+        {}
         {page === "events" && (
           <section>
             <h2>Tüm Etkinlikler</h2>
@@ -172,7 +172,7 @@ export default function App() {
           </section>
         )}
 
-        {/* DETAY SAYFASI */}
+        {}
 {page === "detail" && (
   <section>
     {!selectedEvent ? (
@@ -224,7 +224,7 @@ export default function App() {
   </section>
 )}
 
-        {/* 4 & 5. EKLE VE GÜNCELLE SAYFALARI */}
+        {}
         {(page === "add" || page === "update") && (
           <section>
             <h2>{page === "add" ? "Etkinlik Ekle" : "Etkinlik Güncelle"}</h2>

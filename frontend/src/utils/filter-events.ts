@@ -23,4 +23,4 @@ export function findEventById(
   id: string
 ): CampusEvent | undefined {
   return list.find((e) => e.id === id);
-}
+}   
