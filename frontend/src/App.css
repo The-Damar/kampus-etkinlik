@@ -1,9 +1,9 @@
 :root {
-  --primary: #556b2f; /* Hocanın yeşil tonu */
-  --primary-dark: #3e4f22;
-  --bg-light: #f7f9f4;
-  --text-dark: #222;
-  --border-color: #d1d9c5;
+  --primary: #7b1fa2; /* Numarana özel mor stil */
+  --primary-dark: #4a148c;
+  --bg-light: #f8f9fa;
+  --text-dark: #212529;
+  --border-color: #e0e0e0;
 }
 
 * {
@@ -13,17 +13,18 @@
 }
 
 body {
-  font-family: Georgia, serif, system-ui, -apple-system;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-variant-numeric: normal; /* Rakamların 6-5 gibi aşağı-yukarı kaymasını engeller */
   background-color: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.5;
 }
 
-/* Header & Navbar */
+/* Header & Mor Navbar */
 header {
-  background-color: #6b8e23;
+  background-color: var(--primary);
   color: white;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 1.5rem 1rem;
 }
 
 header .header-inner {
@@ -33,7 +34,7 @@ header .header-inner {
 
 header h1 {
   font-size: 2rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
 header p {
@@ -51,25 +52,27 @@ nav ul {
 nav a {
   color: white;
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s;
 }
 
 nav a.active, nav a:hover {
-  background-color: white;
-  color: #3e4f22;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
   font-weight: bold;
 }
 
-/* Ana Sayfa Düzeni (Layout Container) */
+/* Sayfa İçerik Konteyneri */
 main {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-/* Etkinlik Filtre Alanı */
+/* Filtreleme Alanı */
 .filtre-alani {
   background: white;
   padding: 1.2rem;
@@ -102,18 +105,18 @@ main {
   width: 100%;
 }
 
-/* Etkinlik Kartları (Grid Layout) */
+/* Etkinlik Kartları Grid Yapısı */
 .etkinlik-listesi {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .kart {
   background: white;
   border: 1px solid var(--border-color);
-  border-top: 4px solid #6b8e23;
-  border-radius: 6px;
+  border-top: 4px solid var(--primary);
+  border-radius: 8px;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -122,24 +125,24 @@ main {
 
 .kart h2 {
   font-size: 1.2rem;
-  color: #222;
+  color: var(--primary);
 }
 
 .kart .kategori {
   display: inline-block;
-  background: #eef3e6;
-  color: #4b6620;
+  background: #f3e5f5;
+  color: var(--primary-dark);
   font-size: 0.8rem;
   font-weight: bold;
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 4px;
   width: fit-content;
 }
 
-/* Butonlar */
+/* Mor Butonlar */
 .buton {
   display: inline-block;
-  background-color: #6b8e23;
+  background-color: var(--primary);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -152,10 +155,10 @@ main {
 }
 
 .buton:hover {
-  background-color: #556b2f;
+  background-color: var(--primary-dark);
 }
 
-/* Admin Tablo Düzenlemeleri */
+/* Tablo */
 .tablo {
   width: 100%;
   border-collapse: collapse;
@@ -167,7 +170,7 @@ main {
 }
 
 .tablo th {
-  background-color: #6b8e23;
+  background-color: var(--primary);
   color: white;
   text-align: left;
   padding: 0.75rem 1rem;
@@ -176,9 +179,4 @@ main {
 .tablo td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #eee;
-}
-
-/* Navbar Bileşeni İnce Ayarı */
-header nav ul {
-  padding-left: 0;
 }
