@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 function Header() {
   const location = useLocation();
 
-  // Rotaya göre dinamik başlık ve alt açıklama belirleme
+  
   const getHeaderContent = () => {
     const path = location.pathname;
     if (path.startsWith("/events/")) {

@@ -10,7 +10,7 @@ function EventDetail({ event }: EventDetailProps) {
   return (
     <div>
       <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", marginBottom: "2rem" }}>
-        {/* Sol Afiş Alanı */}
+        
         <div style={{ flex: "1", minWidth: "300px" }}>
           <div
             style={{
@@ -37,7 +37,7 @@ function EventDetail({ event }: EventDetailProps) {
           </p>
         </div>
 
-        {/* Sağ Künye Kutusu */}
+        
         <div
           style={{
             flex: "1",
@@ -74,7 +74,7 @@ function EventDetail({ event }: EventDetailProps) {
         </div>
       </div>
 
-      {/* Açıklama ve Butonlar */}
+      
       <div style={{ marginTop: "1.5rem" }}>
         <h3 style={{ fontSize: "1.3rem", marginBottom: "0.5rem" }}>Açıklama</h3>
         <p style={{ marginBottom: "1.5rem", color: "#333" }}>{event.description}</p>
