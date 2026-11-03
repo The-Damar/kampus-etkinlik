@@ -9,4 +9,4 @@ export function formatDate(dateStr: string): string {
   ];
   const monthName = months[parseInt(month, 10) - 1] || month;
   return `${parseInt(day, 10)} ${monthName} ${year}`;
-}
+}   

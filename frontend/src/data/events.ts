@@ -63,3 +63,4 @@ export const events: CampusEvent[] = [
     description: "Fikirden ürüne startup yolculuğu ve yatırım süreçleri."
   }
 ];
+export const initialEvents = events;

@@ -266,3 +266,21 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.tablo { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.tablo th { background: var(--renk-ana); color: #fff; padding: 8px; text-align: left; }
+.tablo td { padding: 8px; border-bottom: 1px solid #ddd; }
+.islemler { display: flex; gap: var(--bosluk-s); }
+.buton-sil { background: var(--renk-hata) !important; }
+
+@media (max-width: 699px) {
+  .tablo thead { display: none; }
+  .tablo tr { display: block; border: 1px solid #ccc; border-radius: var(--kose); margin-bottom: 1rem; padding: 8px; }
+  .tablo td { display: block; text-align: right; }
+  .tablo td.islemler { display: flex; justify-content: flex-end; }
+  .tablo td[data-baslik]::before {
+    content: attr(data-baslik) ": ";
+    font-weight: 700;
+    float: left;
+  }
+}

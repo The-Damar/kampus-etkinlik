@@ -1,38 +1,40 @@
 interface EventFilterProps {
   searchText: string;
-  onSearchChange: (text: string) => void;
   category: string;
-  onCategoryChange: (cat: string) => void;
-  categories: string[];
+  onSearchChange: (text: string) => void;
+  onCategoryChange: (category: string) => void;
+  categories?: string[];
 }
+
+const defaultCategories = ["Seminer", "Atölye", "Söyleşi", "Yarışma"];
 
 function EventFilter({
   searchText,
-  onSearchChange,
   category,
+  onSearchChange,
   onCategoryChange,
-  categories,
+  categories = defaultCategories,
 }: EventFilterProps) {
   return (
     <div className="filtre-alani">
-      <div className="filtre-grup">
-        <label htmlFor="search">Etkinlik ara</label>
+      <div className="form-grup">
+        <label htmlFor="search">Arama</label>
         <input
           id="search"
-          type="search"
-          placeholder="Örn. atölye, kariyer"
+          type="text"
+          placeholder="Etkinlik veya açıklama ara..."
           value={searchText}
           onChange={(e) => onSearchChange(e.target.value)}
         />
       </div>
-      <div className="filtre-grup">
-        <label htmlFor="category">Kategori</label>
+      <div className="form-grup">
+        <label htmlFor="category-filter">Kategori</label>
         <select
-          id="category"
+          id="category-filter"
           value={category}
           onChange={(e) => onCategoryChange(e.target.value)}
         >
-          <option value="">Tümü</option>
+          <option value="">Tüm Kategoriler</option>
           {categories.map((cat) => (
             <option key={cat} value={cat}>
               {cat}
