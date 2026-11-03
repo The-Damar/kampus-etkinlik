@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEvents } from "../context/EventsContext";
 import EventDetail from "../components/events/EventDetail";
 import NotFoundPage from "./NotFoundPage";
@@ -12,13 +12,7 @@ function EventDetailPage() {
 
   return (
     <div>
-      <h2>{event.title}</h2>
       <EventDetail event={event} />
-      <div style={{ marginTop: "1rem" }}>
-        <Link to="/events" className="buton">
-          ← Listeye Dön
-        </Link>
-      </div>
     </div>
   );
 }
