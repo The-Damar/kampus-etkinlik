@@ -10,6 +10,7 @@ npm install
 npm run dev
 
 Route Listesi
+
 / - Ana Sayfa
 
 /events - Etkinlikler Listesi
@@ -28,4 +29,4 @@ Route Listesi
 
 /forgot-password - Şifremi Unuttum Sayfası
 
-* - 404 Sayfa Bulunamadı
+/* - 404 Sayfa Bulunamadı
