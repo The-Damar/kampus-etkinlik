@@ -180,3 +180,17 @@ main {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #eee;
 }
+
+.hata-mesaji {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #dc2626 !important;
+  background-color: #fff5f5;
+}
