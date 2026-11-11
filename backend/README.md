@@ -8,3 +8,9 @@ Bu proje, Kampüs Etkinlik uygulamasının Express.js ile geliştirilmiş REST A
 cd backend
 npm install
 npm run dev
+
+Sunucu varsayılan olarak http://localhost:3000 adresinde çalışır. Ortam değişkenleri .env dosyasından okunur.
+
+Ortam Değişkenleri (.env)
+
+PORT: Sunucunun çalışacağı port numarası (Varsayılan: 3000)
