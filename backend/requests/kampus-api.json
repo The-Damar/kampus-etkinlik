@@ -1,6 +1,5 @@
 {
   "info": {
-    "_postman_id": "kampus-api-collection-v7",
     "name": "Kampüs API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
@@ -10,7 +9,13 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": { "raw": "http://localhost:3000/health", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["health"] }
+        "url": {
+          "raw": "http://localhost:3000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["health"]
+        }
       }
     },
     {
@@ -18,7 +23,13 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": { "raw": "http://localhost:3000/events", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["events"] }
+        "url": {
+          "raw": "http://localhost:3000/events",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["events"]
+        }
       }
     },
     {
@@ -26,7 +37,13 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": { "raw": "http://localhost:3000/events/event-2", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["events", "event-2"] }
+        "url": {
+          "raw": "http://localhost:3000/events/6afd4a4f461f5fa229853ae7",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["events", "6afd4a4f461f5fa229853ae7"]
+        }
       }
     },
     {
@@ -34,31 +51,59 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": { "raw": "http://localhost:3000/events/yok", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["events", "yok"] }
+        "url": {
+          "raw": "http://localhost:3000/events/111111",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["events", "111111"]
+        }
       }
     },
     {
       "name": "5 Etkinlik oluştur (201)",
       "request": {
         "method": "POST",
-        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"title\": \"Git Atölyesi\",\n  \"category\": \"Atölye\",\n  \"date\": \"2026-12-01\",\n  \"capacity\": 30,\n  \"time\": \"14:00\",\n  \"location\": \"Bilgisayar Laboratuvarı 1\",\n  \"description\": \"Git ve GitHub ile ilk adımlar.\"\n}"
+          "raw": "{\n  \"title\": \"Git Atölyesi\",\n  \"category\": \"Atölye\",\n  \"date\": \"2026-12-01\",\n  \"time\": \"14:00\",\n  \"location\": \"Bilgisayar Laboratuvarı 1\",\n  \"capacity\": 30,\n  \"description\": \"Git ve GitHub ile ilk adımlar.\"\n}"
         },
-        "url": { "raw": "http://localhost:3000/events", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["events"] }
+        "url": {
+          "raw": "http://localhost:3000/events",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["events"]
+        }
       }
     },
     {
       "name": "6 Eksik veri (400)",
       "request": {
         "method": "POST",
-        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"title\": \"Eksik Etkinlik\"\n}"
+          "raw": "{\n  \"title\": \"Test\"\n}"
         },
-        "url": { "raw": "http://localhost:3000/events", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["events"] }
+        "url": {
+          "raw": "http://localhost:3000/events",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["events"]
+        }
       }
     }
   ]
