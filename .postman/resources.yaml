@@ -5,3 +5,7 @@ workspace:
 localResources:
   collections:
     - ../backend/requests/kampus-api.json
+
+cloudResources:
+  collections:
+    ../postman/collections/Kampüs API · Sprint 9: eedae2cc-4488-4fc2-8acd-ec9db21e293f
